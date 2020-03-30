@@ -62,7 +62,20 @@ public class Deck {
 	 * and reset the size to represent the entire deck.
 	 */
 	public void shuffle() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
+		List<Card> shuffled = new ArrayList<Card>();
+
+		for(int k = 0; k < size(); k++){
+
+			boolean found = false;
+			while(!found){
+				int j = (int)Math.random() * size();
+				//if(cards<j> != null){
+					shuffled[k] = cards[j];
+					found = true;
+				//}
+				cards[j] = null;
+			}
+		}
 	}
 
 	/**
